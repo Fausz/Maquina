@@ -304,7 +304,7 @@ public class Producto {
         String precio=String.valueOf(cantidad);
 
 
-        
+
         /*
         //Creamos String para almacenar los decimales del precio
         String str;
@@ -323,17 +323,32 @@ public class Producto {
             int decNumberInt = Integer.parseInt(precio.substring(precio.indexOf('.') + 1));
             String totalDec= String.valueOf(decNumberInt);
 
-        if(totalDec.length()>2 ){
+            //String total;
+            //SI ES UN 0 EL ULTIMO DIGITO SUMARLO
+        System.out.println(totalDec);
+
+        if(totalDec.length()<2) {
+            //Si no termina en 5 le añadimos un 0 pues java lo omite
+            if (decNumberInt % 10 != 5) {
+                totalDec = decNumberInt + "" + 0;
+                decNumberInt = Integer.parseInt(totalDec);
+            }
+        }
+        //Si tiene mas de 2 digitos dara error
+        if(totalDec.length()>2 || totalDec.length()<=1){
             System.out.println("Se tienen que introducir un maximo de 2 digitos decimales.");
             return false;
         }else {
+
             //Si la ultima cifra de los decimales termina en 1,2,3 o 4 no será valido
-            if ((decNumberInt % 10) >= 1 && decNumberInt % 10 <= 4) {
+            if (((decNumberInt % 10) >= 1 && (decNumberInt % 10) <= 4) || ((decNumberInt % 10) >= 6 && ((decNumberInt % 10)) <= 9)) {
                 System.out.println("No esta maquina no admite las monedas de 1 y 2 cent, ingresa precios acabados en 0 o 5.");
                 return false;
             } else {
-                return true;
-            }
+
+                    return true;
+                }
+
         }
     }
 
