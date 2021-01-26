@@ -218,7 +218,7 @@ public class Producto {
                     cantidadValida = false;
                     sc.nextLine();
                 }
-                /////////////////////////////////////////////7
+                
                 /*if(cantidad<0){
                     //System.out.println("No se puede introducir un precio inferior a 0, vuelve a introducir un precio.");
                     cantidadValida = false;
