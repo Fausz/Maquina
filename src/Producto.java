@@ -218,7 +218,7 @@ public class Producto {
                     cantidadValida = false;
                     sc.nextLine();
                 }
-                
+
                 /*if(cantidad<0){
                     //System.out.println("No se puede introducir un precio inferior a 0, vuelve a introducir un precio.");
                     cantidadValida = false;
@@ -303,6 +303,8 @@ public class Producto {
         //Para comprobar los decimales para que nos lleguen siempre 2 del precio debemos:
         String precio=String.valueOf(cantidad);
 
+
+        
         /*
         //Creamos String para almacenar los decimales del precio
         String str;
