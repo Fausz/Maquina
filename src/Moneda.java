@@ -614,7 +614,7 @@ public class Moneda {
                 }
             }
             //Si hay alguna moneda de este tipo se mostrará la cantidad, sino no se mostrará pues entrar entra dentro de esta condicional.
-            if (auxCant2 > 0) {
+            if (aux2 > 0) {
                 System.out.printf("%nMonedas de 2€: %d", aux2);
             }
         }
@@ -640,7 +640,7 @@ public class Moneda {
                     aux1++;
                 }
             }
-            if (auxCant1 > 0) {
+            if (aux1 > 0) {
                 System.out.printf("%nMonedas de 1€: %d", aux1);
             }
         }
@@ -665,7 +665,7 @@ public class Moneda {
                     aux50++;
                 }
             }
-            if (auxCant50 > 0) {
+            if (aux50 > 0) {
                 System.out.printf("%nMonedas de 50 cent: %d", aux50);
             }
 
@@ -719,7 +719,7 @@ public class Moneda {
                     aux10++;
                 }
             }
-            if (auxCant10 > 0) {
+            if (aux10 > 0) {
                 System.out.printf("%nMonedas de 10 cent: %d", aux10);
             }
         }
@@ -745,7 +745,7 @@ public class Moneda {
                     aux5++;
                 }
             }
-            if (auxCant5 > 0) {
+            if (aux5 > 0) {
                 System.out.printf("%nMonedas de 5 cent: %d", aux5);
             }
         }
