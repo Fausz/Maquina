@@ -16,7 +16,7 @@ public class Producto {
     private static int cantidadTotal=0;
 
     //Variables que contendrán los precios actuales de los productos.
-    private static double precioActualSolo=0.7;
+    private static double precioActualSolo=0.50;
     private static double precioActualConLeche=0.8;
     private static double precioActualTe=0.55;
 
@@ -170,17 +170,20 @@ public class Producto {
 
             //Se procede a la devolución del cambio del producto.
             Moneda.restarCajetin(precioActualSolo);
+            Moneda.actualizarCambioMaquina();
 
         }else if(t == Tipo.valueOf(Tipo.class, "CONLECHE")){
             precio=precioActualConLeche;
             Producto.cantidadConLeche--;
             Producto.cantidadConLecheVendida++;
             Moneda.restarCajetin(precioActualConLeche);
+            Moneda.actualizarCambioMaquina();
         }else if(t == Tipo.valueOf(Tipo.class, "TE")){
             precio=precioActualTe;
             Producto.cantidadTe--;
             Producto.cantidadTeVendida++;
             Moneda.restarCajetin(precioActualTe);
+            Moneda.actualizarCambioMaquina();
         }
     }
 
@@ -275,7 +278,7 @@ public class Producto {
                     double cant=cantDouble/100;
 
                     //Si el producto se ha modificado saldrá del bucle.
-                    if (Producto.cambiarPrecio(numProducto, cant)) {
+                    if (cambiarPrecio(numProducto, cant)) {
                         salir = true;
                         numProductoValido = false;
                         cantidadValida = false;

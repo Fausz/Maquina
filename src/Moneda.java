@@ -9,12 +9,12 @@ public class Moneda {
     private static double totalCaja = 0;
 
     //Variables que contendrán el numero de cada tipo de moneada del cambio interno de la máquina.
-    private static int cant5 = 5;//2
-    private static int cant10 = 5;
-    private static int cant20 = 5;//3
-    private static int cant50 = 5;
-    private static int cant1 = 5;
-    private static int cant2 = 5;
+    private static int cant5 = 2;//2
+    private static int cant10 = 0;
+    private static int cant20 = 0;//3
+    private static int cant50 = 1;
+    private static int cant1 = 1;
+    private static int cant2 = 0;
 
     //Variables que contendrán el numero de cada tipo de moneada del cajetin de monedas de la máquina.
     private static int cant5Insertada = 0;
@@ -245,6 +245,26 @@ public class Moneda {
         return resp;
     }
 
+    public static void actualizarCambioMaquina(){
+        /**
+         * Método para actualizar las monedas de cambio de la máquina.
+         */
+            int aux2,aux1,aux50,aux20,aux10,aux5;
+
+            aux2=cant2;
+            aux1=cant1;
+            aux50=cant50;
+            aux20=cant20;
+            aux10=cant10;
+            aux5=cant5;
+
+            cant2=aux2;
+            cant1=aux1;
+            cant50=aux50;
+            cant20=aux20;
+            cant10=aux10;
+            cant5=aux5;
+    }
     public static void restarCajetin(double precioProducto) {
         /**
          * Método que hará el proceso de cambio con la devolucion del producto y reseteará el cajetin.
@@ -375,7 +395,10 @@ public class Moneda {
          */
 
         //Obtenemos todo el cambio de la caja en int.
-        int cambio = (int)calcularPrecioTotalMonedas();
+        double cambioDecimal = calcularPrecioTotalMonedas()*100;
+        int cambio=(int)cambioDecimal;
+
+        //pasar a entero el cambio
 
         //Calculamos el resto de cajetin-precio.
         int centimos = calcularCambioCajetin(precioProducto);
