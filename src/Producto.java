@@ -16,7 +16,7 @@ public class Producto {
     private static int cantidadTotal=0;
 
     //Variables que contendrán los precios actuales de los productos.
-    private static double precioActualSolo=0.50;
+    private static double precioActualSolo=0.7;
     private static double precioActualConLeche=0.8;
     private static double precioActualTe=0.55;
 

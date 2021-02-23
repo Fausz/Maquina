@@ -249,21 +249,13 @@ public class Moneda {
         /**
          * Método para actualizar las monedas de cambio de la máquina.
          */
-            int aux2,aux1,aux50,aux20,aux10,aux5;
 
-            aux2=cant2;
-            aux1=cant1;
-            aux50=cant50;
-            aux20=cant20;
-            aux10=cant10;
-            aux5=cant5;
-
-            cant2=aux2;
-            cant1=aux1;
-            cant50=aux50;
-            cant20=aux20;
-            cant10=aux10;
-            cant5=aux5;
+        cant2=getCant2();
+        cant1=getCant1();
+        cant50=getCant50();
+        cant20=getCant20();
+        cant10=getCant10();
+        cant5=getCant5();
     }
     public static void restarCajetin(double precioProducto) {
         /**
